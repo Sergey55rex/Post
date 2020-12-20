@@ -1,5 +1,5 @@
-data class Post (
-    var id: Long,
+data class Post(
+    var id: Long = 0,
     val date: String,
     val text: String,
     val lices: Int,
@@ -24,12 +24,10 @@ data class Post (
     val reposts: Any = 0,
     val views: Any = 0,
     val donut: Any = 0,
+) {
 
 
-    ) {
-
-
-        // var lices: Int = lices
+         //var lices: Int = lices
         //set(value){
         //    if (value >= 0) {
         //       field = value

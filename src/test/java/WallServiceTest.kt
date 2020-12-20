@@ -8,12 +8,11 @@ class WallServiceTest {
     @Test
     fun addPost() {
         val expected = Post(
-            0,
+            4,
             "18.12.2020",
             "text",
             0
         )
-
         val result = service.add(expected)
         assertEquals(expected, result)
     }
@@ -45,6 +44,6 @@ class WallServiceTest {
             0)
 
         val result = service.update(update)
-        assertFalse(result)
+        assertTrue(result)
     }
 }

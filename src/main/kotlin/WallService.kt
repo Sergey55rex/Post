@@ -4,9 +4,10 @@ object WallService {
     var posts = emptyArray<Post>()
 
     fun add(post: Post): Post {
-        val copy = post.copy(id = id++)
+        val copy = post.copy(id = ++id)
         posts += copy
         return posts.last()
+        //return post
     }
 
     fun update(post: Post): Boolean {
