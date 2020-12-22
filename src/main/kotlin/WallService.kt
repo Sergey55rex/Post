@@ -10,9 +10,11 @@ object WallService {
 
     fun update(post: Post ): Boolean {
         val id = post.id
-         for ((infix , post) in posts.withIndex()) {
+         for ((index , post) in posts.withIndex()) {
              if (post.id == id){
-                return true
+                 posts[index] = post.copy(text = "test", lices = post.lices + 1, postType = "visio")
+                 println(posts[index])
+                 return true
             }
         }
         return false
