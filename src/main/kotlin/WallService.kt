@@ -1,9 +1,9 @@
 object WallService {
-    var id = 0L
     var posts = emptyArray<Post>()
 
     fun add(post: Post): Post {
-        val copy = post.copy(id = ++id)
+        val id = if (posts.isEmpty()) 1 else posts.last().id + 1;
+        val copy = post.copy(id = id)
         posts += copy
         return posts.last()
     }

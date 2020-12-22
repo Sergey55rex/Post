@@ -3,7 +3,7 @@ import org.junit.Test
 import org.junit.Assert.*
 
 class WallServiceTest {
-    val service = WallService
+   val service = WallService
 
     @Test
     fun addPost() {
@@ -49,34 +49,10 @@ class WallServiceTest {
 
     @Test
     fun updateExistingFalse() {
-        service.add(Post(
-                0,
-                "18.12.2020",
-                "text",
-                0))
-
-        service.add(Post(
-                1,
-                "19.12.2020",
-                "text",
-                0))
-
-        service.add(Post(
-                0,
-                "18.12.2020",
-                "text text",
-                0))
-
-        val updates = Post(
-                0,
-                "18.12.2020",
-                "text",
-                0)
-
         assertFalse(emptyArray<Post>())
     }
 
     private fun assertFalse(emptyArray: Array<Post>) {
-
     }
 }
+
