@@ -3,6 +3,7 @@ data class Post(
     val date: String,
     val text: String,
     val lices: Int,
+
     val ownerId: Int = 0,
     val fromId: Int = 0,
     val createdBy: Int = 0,
@@ -24,14 +25,5 @@ data class Post(
     val reposts: Any = 0,
     val views: Any = 0,
     val donut: Any = 0,
-) {
 
-
-         //var lices: Int = lices
-        //set(value){
-        //    if (value >= 0) {
-        //       field = value
-        //   }
-         //}
-
-    }
+    )

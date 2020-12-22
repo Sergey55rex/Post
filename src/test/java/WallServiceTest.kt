@@ -8,7 +8,7 @@ class WallServiceTest {
     @Test
     fun addPost() {
         val expected = Post(
-            1,
+            2,
             "18.12.2020",
             "text",
             0
@@ -20,25 +20,13 @@ class WallServiceTest {
     @Test
     fun updateExistingTrue() {
         service.add(Post(
-            0,
-            "18.12.2020",
-            "text",
-            0))
-
-        service.add(Post(
             1,
-            "19.12.2020",
-            "text",
-            0))
-
-        service.add(Post(
-            0,
             "18.12.2020",
-            "text text",
+            "text",
             0))
 
         val update = Post(
-            0,
+            1,
             "18.12.2020",
             "text",
             0)
@@ -49,10 +37,19 @@ class WallServiceTest {
 
     @Test
     fun updateExistingFalse() {
-        assertFalse(emptyArray<Post>())
-    }
+        service.add(Post(
+            3,
+            "18.12.2020",
+            "text text",
+            0))
 
-    private fun assertFalse(emptyArray: Array<Post>) {
+        val update = Post(
+            3,
+            "18.12.2020",
+            "text",
+            0)
+        val result = service.update(update)
+        assertFalse(result)
     }
 }
 
