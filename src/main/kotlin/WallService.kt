@@ -13,7 +13,7 @@ object WallService {
          for ((index , post) in posts.withIndex()) {
              if (post.id == id){
                  posts[index] = post.copy(text = "test", lices = post.lices + 1, postType = "visio")
-                 println(posts[index])
+                 //println(posts[index])
                  return true
             }
         }
