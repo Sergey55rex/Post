@@ -1,5 +1,5 @@
 
-data class Post(
+data class Post (
         var id: Long = 0,
         val date: String,
         val text: String,
@@ -25,7 +25,8 @@ data class Post(
         val reposts: Reposts?,
         val views: Views?,
         val original: Post?,
-        val attachment: Attachment?
+        val attachment: Attachment?,
+        val attechments: Array<Attechments>?
 
     ){
     fun isRepost(): Boolean{

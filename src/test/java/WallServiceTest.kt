@@ -23,7 +23,8 @@ class WallServiceTest {
                 likes = null,
                 reposts = null,
                 views = null,
-                attachment = null
+                attachment = null,
+                attechments = null
         )
         val result = service.add(expected)
         assertEquals(expected, result)
@@ -47,7 +48,8 @@ class WallServiceTest {
                 likes = null,
                 reposts = null,
                 views = null,
-                attachment = null
+                attachment = null,
+                attechments = null
         ),
 
         )
@@ -68,7 +70,8 @@ class WallServiceTest {
                 likes = null,
                 reposts = null,
                 views = null,
-                attachment = null
+                attachment = null,
+                attechments = null
         )
 
         val result = service.update(update)
@@ -93,7 +96,8 @@ class WallServiceTest {
                 likes = null,
                 reposts = null,
                 views = null,
-                attachment = null
+                attachment = null,
+                attechments = null
         ))
 
         val update = Post(
@@ -112,7 +116,8 @@ class WallServiceTest {
                 likes = null,
                 reposts = null,
                 views = null,
-                attachment = null
+                attachment = null,
+                attechments = null
         )
         val result = service.update(update)
         assertFalse(result)
