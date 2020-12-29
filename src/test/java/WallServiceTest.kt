@@ -11,7 +11,20 @@ class WallServiceTest {
             2,
             "18.12.2020",
             "text",
-            0
+            0,
+                    original = null,
+                comments = Comments(
+                        1,
+                        true,
+                        false,
+                        false,
+                        true
+                ),
+                likes = null,
+                reposts = null,
+                views = null,
+                attachment = null,
+                attechments = null
         )
         val result = service.add(expected)
         assertEquals(expected, result)
@@ -23,13 +36,43 @@ class WallServiceTest {
             1,
             "18.12.2020",
             "text",
-            0))
+            0,
+                original = null,
+                comments = Comments(
+                        1,
+                        true,
+                        false,
+                        false,
+                        true
+                ),
+                likes = null,
+                reposts = null,
+                views = null,
+                attachment = null,
+                attechments = null
+        ),
+
+        )
 
         val update = Post(
             1,
             "18.12.2020",
             "text",
-            0)
+            0,
+                    original = null,
+                comments = Comments(
+                        1,
+                        true,
+                        false,
+                        false,
+                        true
+                ),
+                likes = null,
+                reposts = null,
+                views = null,
+                attachment = null,
+                attechments = null
+        )
 
         val result = service.update(update)
         assertTrue(result)
@@ -41,13 +84,41 @@ class WallServiceTest {
             3,
             "18.12.2020",
             "text text",
-            0))
+            0,
+                original = null,
+                comments = Comments(
+                        1,
+                        true,
+                        false,
+                        false,
+                        true
+                ),
+                likes = null,
+                reposts = null,
+                views = null,
+                attachment = null,
+                attechments = null
+        ))
 
         val update = Post(
             3,
             "18.12.2020",
             "text",
-            0)
+            0,
+                original = null,
+                comments = Comments(
+                        1,
+                        true,
+                        false,
+                        false,
+                        true
+                ),
+                likes = null,
+                reposts = null,
+                views = null,
+                attachment = null,
+                attechments = null
+        )
         val result = service.update(update)
         assertFalse(result)
     }
