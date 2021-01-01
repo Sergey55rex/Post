@@ -1,3 +1,4 @@
+import org.junit.Assert
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -122,5 +123,77 @@ class WallServiceTest {
         val result = service.update(update)
         assertFalse(result)
     }
+
+    //@Test
+    @Test(expected = PostNotFoundException::class)
+    fun shouldThrow() {
+        val error = "PostNotFoundException"
+
+        val result =     service.createComment(
+                coment = Coment(
+                    1,
+                    1,
+                    3,
+                    "ttttttyyyy",
+                    4,
+                    attachments = Attechments(),
+                    5,
+                    "nnnnnnnnnnn"
+            )
+        )
+
+
+println(result)
+           //assertFalse(result )
+
+
+//        val result = service.createComment(
+//                coment = Coment(
+//                    1,
+//                    1,
+//                    3,
+//                    "ttttttyyyy",
+//                    4,
+//                    attachments = Attechments(),
+//                    5,
+//                    "nnnnnnnnnnn"
+//            )
+//        )
+//
+//        assertTrue(result)
+
+
+        // здесь код с вызовом функции, которая должна выкинуть PostNotFoundException
+    }
+
+//    fun shouldThrow() {
+//
+//        val expected = PostNotFoundException::class
+//
+//        val result = service.createComment(
+//                coment = Coment(
+//                    1,
+//                    1,
+//                    3,
+//                    "ttttttyyyy",
+//                    4,
+//                    attachments = Attechments(),
+//                    5,
+//                    "nnnnnnnnnnn"
+//            )
+//        )
+//        try {
+//
+//        }catch (e: PostNotFoundException){
+//            println("пост с таким id не существует")
+//        }
+//
+//        //assertEquals(expected, result)
+//        println(expected)
+//        println(result)
+
+
+
+
 }
 
