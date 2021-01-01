@@ -1,9 +1,6 @@
-import org.junit.Assert
-
 object WallService {
     var posts = emptyArray<Post>()
     var coments = emptyArray<Coment>()
-
 
     fun add(post: Post): Post {
         val id = if (posts.isEmpty()) 1 else posts.last().id + 1;
@@ -24,29 +21,6 @@ object WallService {
         return false
     }
 
-//    fun createComment(coment: Coment) :Coment {
-//
-//        for ((index, post) in posts.withIndex()) {
-//
-//            if (coment.postId == post.id){
-//               println(" id совпали ")
-//                val copy = coment.copy()
-//                coments += copy
-//            } else {
-//                try {
-//                    throw PostNotFoundException ("id не существует")
-//
-//    }catch (e: PostNotFoundException){
-//        println("пост с таким id не существует")
-//    }
-//       }
-//            }
-//        return  coment
-//    }
-
-
-
-
     fun createComment(coment: Coment) :Boolean {
 
         for ((index, post) in posts.withIndex()) {
@@ -59,16 +33,13 @@ object WallService {
             }
         }
 
-                    try {
-                        throw PostNotFoundException ("id не существует")
-                }catch (e: PostNotFoundException){
+        try {
+            throw PostNotFoundException ("id не существует")
+        }catch (e: PostNotFoundException){
 
-                    println("пост с таким id не существует")
-                        return  false
-                }
-
+            println("пост с таким id не существует")
+            return  false
+        }
     }
-
-
 }
 
