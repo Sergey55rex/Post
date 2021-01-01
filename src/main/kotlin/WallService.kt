@@ -1,4 +1,4 @@
-object WallService {
+ object WallService {
     var posts = emptyArray<Post>()
     var coments = emptyArray<Coment>()
 
