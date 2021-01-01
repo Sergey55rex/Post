@@ -1,1 +1,3 @@
-class PostNotFoundException(message: String) : Exception(message)
+import java.lang.RuntimeException
+
+class PostNotFoundException(message: String) : RuntimeException(message)

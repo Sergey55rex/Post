@@ -1,3 +1,5 @@
+import org.junit.Assert
+
 object WallService {
     var posts = emptyArray<Post>()
     var coments = emptyArray<Coment>()
@@ -22,29 +24,50 @@ object WallService {
         return false
     }
 
-    fun createComment(coment: Coment) :Coment {
+//    fun createComment(coment: Coment) :Coment {
+//
+//        for ((index, post) in posts.withIndex()) {
+//
+//            if (coment.postId == post.id){
+//               println(" id совпали ")
+//                val copy = coment.copy()
+//                coments += copy
+//            } else {
+//                try {
+//                    throw PostNotFoundException ("id не существует")
+//
+//    }catch (e: PostNotFoundException){
+//        println("пост с таким id не существует")
+//    }
+//       }
+//            }
+//        return  coment
+//    }
+
+
+
+
+    fun createComment(coment: Coment) :Boolean {
 
         for ((index, post) in posts.withIndex()) {
 
             if (coment.postId == post.id){
-               println(" id совпали ")
+                println(" id совпали ")
                 val copy = coment.copy()
                 coments += copy
-            } else {
-
-                try {
-                throw PostNotFoundException("Hey, I am testing it")
-                //println("пост с таким id не существует")
-
-        //println(WallService.createComment(coment))
-    }catch (e: PostNotFoundException){
-        println("пост с таким id не существует")
-    }
-        }
+                return true
             }
-        return coment.copy()
-    }
+        }
 
+                    try {
+                        throw PostNotFoundException ("id не существует")
+                }catch (e: PostNotFoundException){
+
+                    println("пост с таким id не существует")
+                        return  false
+                }
+
+    }
 
 
 }
