@@ -16,20 +16,33 @@ fun main() {
             likes = null,
             reposts = null,
             views = null,
-            attachment = AudioAttachment("audio", Audio(88,"hhhhhhh",2,11)),
+            attachment = AudioAttachment("audio", Audio(88,"hhhhhhh",2,22)),
             //attachment = VideoAttachment("video", Video(5))
             //attachment = null
             attechments = null
 
     )
 
+    val coment = Coment(
+            1,
+            1,
+            3,
+            "комментарии к посту",
+            3,
+            null,
+            4,
+            "hhh"
+    )
+
     println( post.original?.text?:"нет текста в original")
     println( if ((post.comments?.canPost?: Boolean) as Boolean)"пользователь может комментировать запись" else "пользователь не может комментировать запись" )
    // println( post.attachment?.type?: "нет значения поля Type")
-
-    println(WallService.add(post))
+    WallService.add(post)
+   //println(WallService.add(post))
     val resultUpdate = WallService.update(post)
     println(resultUpdate)
+
+    WallService.createComment(coment)
 
     choice(post.attachment)
 }
