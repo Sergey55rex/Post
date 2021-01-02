@@ -27,19 +27,20 @@
 
             if (coment.postId == post.id){
                 println(" id совпали ")
-                val copy = coment.copy()
-                coments += copy
+                coments += coment
                 return true
             }
-        }
-
-        try {
             throw PostNotFoundException ("id не существует")
-        }catch (e: PostNotFoundException){
-
-            println("пост с таким id не существует")
-            return  false
         }
+
+        return false
+//        try {
+//            throw PostNotFoundException ("id не существует")
+//        }catch (e: PostNotFoundException){
+//
+//            println("пост с таким id не существует")
+//            return  false
+//        }
     }
 }
 

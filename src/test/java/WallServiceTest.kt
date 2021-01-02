@@ -129,44 +129,7 @@ class WallServiceTest {
     @Test
     fun shouldThrowTrue() {
         service.add(Post(
-                4,
-                "18.12.2020",
-                "text text",
-                0,
-                original = null,
-                comments = Comments(
-                        1,
-                        true,
-                        false,
-                        false,
-                        true
-                ),
-                likes = null,
-                reposts = null,
-                views = null,
-                attachment = null,
-                attechments = null
-        ))
-
-       val coment =   (Coment(
                 1,
-                1,
-                3,
-                "hhhhhhhhhh",
-                5,
-                attachments = Attechments(),
-                5,
-                "fffffffffffffff"
-        ))
-        val result = service.createComment(coment)
-        assertTrue(result)
-
-    }
-
-    @Test
-    fun shouldThrowFalse() {
-        service.add(Post(
-                5,
                 "18.12.2020",
                 "text text",
                 0,
@@ -186,7 +149,7 @@ class WallServiceTest {
         ))
         val coment =   (Coment(
                 1,
-                5,
+                1,
                 3,
                 "hhhhhhhhhh",
                 5,
@@ -195,11 +158,42 @@ class WallServiceTest {
                 "fffffffffffffff"
         ))
         val result = service.createComment(coment)
-        assertFalse(result)
-
+        assertTrue(result)
     }
-
-
-
+    @Test(expected = PostNotFoundException::class)
+    fun shouldThrowFalse() {
+        service.add(Post(
+                1,
+                "18.12.2020",
+                "text text",
+                0,
+                original = null,
+                comments = Comments(
+                        1,
+                        true,
+                        false,
+                        false,
+                        true
+                ),
+                likes = null,
+                reposts = null,
+                views = null,
+                attachment = null,
+                attechments = null
+        ))
+        val coment =   (Coment(
+                1,
+                6,
+                3,
+                "hhhhhhhhhh",
+                5,
+                attachments = Attechments(),
+                5,
+                "fffffffffffffff"
+        ))
+        val error = "PostNotFoundException"
+        val result = service.createComment(coment)
+        assertEquals(result, error)
+    }
 }
 

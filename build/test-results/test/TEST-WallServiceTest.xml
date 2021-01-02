@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WallServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-01-01T19:21:44" hostname="USER-PC" time="0.04">
+<testsuite name="WallServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-01-02T16:42:44" hostname="USER-PC" time="0.019">
   <properties/>
-  <testcase name="shouldThrowFalse" classname="WallServiceTest" time="0.039"/>
+  <testcase name="shouldThrowFalse" classname="WallServiceTest" time="0.017"/>
   <testcase name="updateExistingFalse" classname="WallServiceTest" time="0.0"/>
   <testcase name="addPost" classname="WallServiceTest" time="0.0"/>
-  <testcase name="updateExistingTrue" classname="WallServiceTest" time="0.0"/>
+  <testcase name="updateExistingTrue" classname="WallServiceTest" time="0.002"/>
   <testcase name="shouldThrowTrue" classname="WallServiceTest" time="0.0"/>
-  <system-out><![CDATA[пост с таким id не существует
-1
+  <system-out><![CDATA[1
  id совпали 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
