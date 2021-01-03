@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WallServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-01-02T16:42:44" hostname="USER-PC" time="0.019">
+<testsuite name="WallServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-01-03T10:40:59" hostname="USER-PC" time="0.02">
   <properties/>
-  <testcase name="shouldThrowFalse" classname="WallServiceTest" time="0.017"/>
+  <testcase name="shouldThrowFalse" classname="WallServiceTest" time="0.016"/>
   <testcase name="updateExistingFalse" classname="WallServiceTest" time="0.0"/>
   <testcase name="addPost" classname="WallServiceTest" time="0.0"/>
-  <testcase name="updateExistingTrue" classname="WallServiceTest" time="0.002"/>
+  <testcase name="updateExistingTrue" classname="WallServiceTest" time="0.003"/>
   <testcase name="shouldThrowTrue" classname="WallServiceTest" time="0.0"/>
   <system-out><![CDATA[1
  id совпали 

@@ -30,10 +30,9 @@
                 coments += coment
                 return true
             }
-            throw PostNotFoundException ("id не существует")
         }
-
-        return false
+        throw PostNotFoundException ("id не существует")
+        //return false
 //        try {
 //            throw PostNotFoundException ("id не существует")
 //        }catch (e: PostNotFoundException){

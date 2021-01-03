@@ -38,12 +38,12 @@ fun main() {
     println( if ((post.comments?.canPost?: Boolean) as Boolean)"пользователь может комментировать запись" else "пользователь не может комментировать запись" )
    // println( post.attachment?.type?: "нет значения поля Type")
     WallService.add(post)
-   //println(WallService.add(post))
+    //println(WallService.add(post))
     val resultUpdate = WallService.update(post)
     println(resultUpdate)
 
-    WallService.createComment(coment)
 
+    WallService.createComment(coment)
     choice(post.attachment)
 }
 
